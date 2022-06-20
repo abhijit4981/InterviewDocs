@@ -1,0 +1,28 @@
+public class MakeSingleton{
+	//why static?
+	//why volatile?
+	private static volatile MakeSingleton makeSingleton = null;
+	private MakeSingleton(){}		//so it can not be initialized from outside
+	//Factory method
+	public MakeSingleton getMakeSingleton(){
+		if(makeSingleton == null){
+			synchronized(MakeSingleton.class){
+				if(makeSingleton == null){
+					makeSingleton = new MakeSingleton();
+				}
+			}		
+		}
+		return makeSingleton;
+	}
+	//Other methods
+	//Why do u use singleton vs @Bean
+	//Where do u use Singleton classes? usecases??
+	//How many different ways u can break this Singleton functionality?
+	//How to prevent Singleton Pattern from Reflection, Serialization and Cloning?
+}
+
+>>Different scopes of @Bean?
+>>How can u use singleton objects?
+>>Best alternative for Singleton?		//use Enums
+MakeSingleton makeSingleton = MakeSingleton.getMakeSingleton();
+makeSingleton.methodName();

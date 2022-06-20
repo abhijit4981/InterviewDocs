@@ -1,0 +1,33 @@
+NODE<K,V>
+null as first key
+Linked List-->Binary Search Tree(After a threashold, introduced in java 8)
+put()-->indexing-->hashcode
+
+Index = hashcode(Key) & (n-1) Where n is the size of the array
+
+
+>>hash collision?? for same hashcode value of the Key
+1.same Key-value by using equals()==>replaces the Value with new Value
+2.different Key-value==> saves to next Node
+
+>>Rehashing??
+
+
+>>ConcurrentHashMap??
+Thread safe
+
+public ConcurrentHashMap (int initialCapacity, float loadFactor, int concurrencyLevel)//concurrencyLevel=4
+
+In the ConcurrentHashMap Api , you will find the following constants.
+
+static final int DEFAULT_INITIAL_CAPACITY = 16;
+static final int DEFAULT_CONCURRENCY_LEVEL = 16;
+
+>>Fail safe Iterator?		==>Iterate + delete/Insert
+
+>>Fail safe vs Fail fast?	==> ConcurrentModificationException
+>>ConcurrentHashMap or Hashtable?
+
+>>HashSet Internal for Value??
+// Dummy value to associate with an Object in the backing Map
+private static final Object PRESENT = new Object();

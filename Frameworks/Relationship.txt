@@ -1,0 +1,5 @@
+Must Update this;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+>>Association, Aggregation and Composition
+Association-->Is-A relationship		==>Employee-PermanentEmployee/ContractEmployee
+Composition-->Has-A relationship	==>User has a Address
+Aggregation-->Own's-A relationship	==>

@@ -1,0 +1,26 @@
+Roles:
+Admin
+Devp
+Operations
+
+Features:
+On-demand provisioning(Cloud) vs OnPrem
+1VM - nVM in matter of seconds in Cloud
+Scalling is easy(Pay as u consume)
+Abstract all resources(No need to think of the hardware)
+
+Service Bus--for msging infra
+Application--Serverless,
+db requirements--SQL
+
+Compute--VM,App services,Sparkc
+Applications--Migrate from Onprem
+Can build hybrid application as well(part of ur appln as well)
+security and compliance
+Storage--Streaming app,
+Networking--
+Mgmt tools--
+
+DevOps in Azure,
+A Set of practices intended to reduce the time between - committing the change to running in production , ensuring high quality.
+

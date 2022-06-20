@@ -1,0 +1,29 @@
+>>How it's different from Constants?
+>>Can enum type be passed as an argument to switch statements?? Yes
+>>We can declare the main() method inside the enum. Hence we can invoke enum directly from the Command Prompt.
+
+>>Ex:
+enum Color {
+    RED,
+    GREEN,
+    BLUE;
+}
+ 
+public class Test {
+    // Driver method
+    public static void main(String[] args)
+    {
+        Color c1 = Color.RED;
+        System.out.println(c1);
+    }
+}
+
+/* internally above enum Color is converted to
+class Color
+{
+     public static final Color RED = new Color();
+     public static final Color BLUE = new Color();
+     public static final Color GREEN = new Color();
+}*/
+
+www.geeksforgeeks.org/enum-in-java/

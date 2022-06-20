@@ -1,0 +1,42 @@
+>>Why use SOLID principles?
+Basically used to reduce dependency.So when making change to one area of the code that should not impact other areas of that code.
+
+>>Reason for SOLID Principles?
+1.help us write better code / agile code.
+2.encourage's us to create more maintainable, understandable, and flexible software.
+3.we can reduce their complexity
+
+>>Explain SOLID principles with example?
+
+
+>>Single Responsibility			//With Classes
+
+1.a class should only have one responsibility. Furthermore, it should only have one reason to change.
+its benefits:
+
+Testing – A class with one responsibility will have far fewer test cases.
+Lower coupling – Less functionality in a single class will have fewer dependencies.
+Organization – Smaller, well-organized classes are easier to search than monolithic ones.
+
+Ex: A simple POJO class. U can use the Util to have other functionality related methods.
+
+>>Open/Closed
+Open for Extension, Closed for Modification
+Helps in not modifying existing code and causing potential new bugs(backward compatibility)
+Ex: By using Abstract class/Interface
+
+
+>>Liskov Substitution
+This asks to make sure the IS-A relationship must be implemented correctly. i.e. the object of subclass will behave the same way the obj of Parent class.
+u can test it by replacing the parent with child object and it should not fail.
+
+>>Interface Segregation			//With Interfaces
+Its simillar to Single responsibility for Interfaces alone.
+Can be achieved by smaller interfaces with specific ask.
+Why?		//To stop clients from implementing unwanted methods.
+>>Dependency Inversion
+Depend on abstraction, Not on Concretion.
+Use autowiring to achieve it. helps addressing hardcoded dependencies and provides loosely coupling. Ex. Dependency injection 
+
+
+Note: www.youtube.com/watch?v=zn2Sn7lMnLM
