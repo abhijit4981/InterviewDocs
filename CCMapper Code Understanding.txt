@@ -1,0 +1,23 @@
+CCMapper Backend Code Understanding:
+
+1.CCMapperApplication.java is the starting point of application (-used @SpringBootApplication).
+
+2.After running the application, dispatcherservlet get initialized and it searches for controller.
+Que> RestController vs Controller?
+
+3.In Controller we have defined method/mapping(eg.GetMapping) and provided url (-used @RestController (for REST API)).ResponseEntity is defined to get whole HTTP response in the form of status code, headers,and body .After hitting url in postman we get output based on method/mapping we have provided in controller.
+Que>  What else we can use instead of Tomcat
+application server vs web server
+
+4.We have entity(-used @Entity) class to store table data which helps uus to convert sql data to java object.
+
+5.In the code we need all data in company alias table so controller searches for service (-used @Service) where logic is written to get all data from table, we take table data in list and return it .Here to fetch data we make use of findAll method that we got from repository.
+
+6.In repository(-used @Repository) we have grouped all the methods to perform operations such as findAll, findById,... as the class extends JpaRepository where table name and type of primary key are passed as arguments.
+
+Que. how to fetch data using non primary key? like findByName
+
+Que. How to handle exception in springboot?
+
+
+
