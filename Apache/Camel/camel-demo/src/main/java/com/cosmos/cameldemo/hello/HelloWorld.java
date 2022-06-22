@@ -1,4 +1,4 @@
-package com.cosmos.cameldemo;
+package com.cosmos.cameldemo.hello;
 
 import com.cosmos.cameldemo.route.HelloWorldRuote;
 import org.apache.camel.CamelContext;
