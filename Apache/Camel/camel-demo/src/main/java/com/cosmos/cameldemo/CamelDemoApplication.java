@@ -2,6 +2,7 @@ package com.cosmos.cameldemo;
 
 import com.cosmos.cameldemo.files.FileCopy;
 import com.cosmos.cameldemo.hello.HelloWorld;
+import com.cosmos.cameldemo.process.ProcessorDemo;
 import com.cosmos.cameldemo.route.FileCopyRoute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,6 +15,8 @@ public class CamelDemoApplication implements CommandLineRunner {
 	private HelloWorld helloWorld;
 	@Autowired
 	private FileCopy fileCopy;
+	@Autowired
+	private ProcessorDemo processorDemo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(CamelDemoApplication.class, args);
@@ -22,6 +25,7 @@ public class CamelDemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		//helloWorld.executeCamelProgram();
-		fileCopy.copyFile();
+		//fileCopy.copyFile();
+		processorDemo.processRequest();
 	}
 }
