@@ -1,0 +1,30 @@
+Time Complexity,
+
+Questions,,
+1.Why do u need to find Time Complexity?
+2.Which 
+3.What is Big O Notation?
+4.How online course works? and to de
+
+Description,
+Time taken by an Algorithm 
+as the function of 
+length of input.
+
+--To find which algorithm is better
+--Ex,
+Q>find sum from 1-N?
+Step1: using formula
+Step2: using loop
+
+Q>find key in a linear array? 
+Step1:
+
+
+Q>Worst case vs Best case??
+at most time it should take(Big O) i.e.
+Rules: 1.the upper bound and 2. ignore constants.
+
+Theta/Omega Notation??
+
+Find Big O of Recursive function?

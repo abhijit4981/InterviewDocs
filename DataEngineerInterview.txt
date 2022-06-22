@@ -1,0 +1,21 @@
+-------------------------------Things to look at
+System Design
+DSA(Mediuum)
+SQL(Join-Windows function)
+Java/Scala
+Big Data Architecture
+Azure/AWS Cloud
+Data Lake
+
+------------------------------How to prepair
+Official Documentation
+Basics
+Keypoints
+Do Hands on
+
+Screening Test//SQL/Data Modelling//ETL/Data Pipeline//Past Experience/Leadership principle
+
+Spark vs Flink
+Advantage of Flink
+
+
