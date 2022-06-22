@@ -19,4 +19,7 @@ public class HelloWorld {
         }
         camelContext.start();
     }
+    public void executeCamelProgramForBuiltInClass(String message){
+        System.out.println("Print this message "+message);
+    }
 }
