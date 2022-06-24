@@ -1,0 +1,19 @@
+Authentication vs Authorisation??
+-->Without authentication and particular Role some Api's should not get accessed.
+OAuth 2.0==>Open Authorisation(Only authorisation protocol not authentication).
+
+Roles,
+1.Resource Owner------->
+2.Client--------------->Must hold proper access token
+3.Authorisation Server->will send to token
+4.Resource Server------>
+
+Scopes:User,Admin
+
+Flow,
+1.
+
+
+
+Follow this tutorial: https://www.youtube.com/watch?v=MOCeQYbQPPU&t=455s
+
