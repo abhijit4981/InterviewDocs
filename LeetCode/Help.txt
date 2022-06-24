@@ -1,0 +1,7 @@
+1. Speed (try to give leetcode contest & practice as much)
+2. Code quality ( cover edge cases)
+3. Communication (explain everything)
+
+
+Revise all concepts first?
+Go see past interview?

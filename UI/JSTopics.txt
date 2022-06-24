@@ -1,0 +1,7 @@
+1. Object oriented programming and ES6 (Prototype Inheritance,Single threaded JS & Event Loop)
+2. how to manipulate data (Array Manipulation Functions)
+3. Pure functions
+4. Promises, callbacks, and asynchronous javascript
+5. Modules, import, export, babel
+6. Async Await
+7. Understand scoping, hoisting, closures and IIFE(Immediately invocable function expression)

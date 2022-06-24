@@ -1,0 +1,7 @@
+Logging must include,
+- Timestamp, 
+- Correlation id/TradeId
+- Interface name
+- Start time
+- End time
+- Any other specific processing info related to the functionality/module.
