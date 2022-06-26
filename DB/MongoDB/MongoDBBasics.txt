@@ -1,0 +1,19 @@
+Steps to install MongoDB in Mac:::::::::::::
+  //Download mongodb community server
+  https://www.mongodb.com/try/download/community
+  //Unzip it and follow in terminal go to location
+  sudo mv mongodb-macos-x86_64-5.0.9 /System/Volumes/Data/mongodb
+  //Then create /data/db
+  sudo mkdir -p /System/Volumes/Data/mongodb/data/db
+  sudo chown -R abhijit4981 /System/Volumes/Data/mongodb/data/db
+  //To address this: “Mongod cannot be opened, because the developer cannot be verified” 
+  cd mongodbpath/bin
+  xattr -dr com.apple.quarantine .
+
+  //run this in one terminal
+  mongod --dbpath=/System/Volumes/Data/mongodb/data/db
+
+  //run this in another terminal inside /bin
+  ./mongo
+  //now u can run commands to check
+  show dbs
