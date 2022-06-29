@@ -1,0 +1,34 @@
+Add the spring security starter dependency
+
+Filters,
+
+By Default behaviour of Spring Security,
+-->Authentication required for all error pages
+-->Loging form
+-->Creates a default credentials
+
+new credentials can be updated from application.properties page.
+
+can be done in memory authentication as well,
+1.create a config class that extends WebSecurityConfigurerAdapter.
+2.add @Configuration,@EnableWebSecurity to this configclass.
+3.override the configure()//which takes -- AuthenticationManagerBuilder
+4.
+5. Define the PasswordEncoder.
+@Bean 
+public PasswordEncoder passwordEncoder() { 
+    return new BCryptPasswordEncoder(); 
+} 
+
+6.configure Authorize Requests. Ex,
+http
+      .csrf().disable()
+      .authorizeRequests()
+      .antMatchers("/admin/**").hasRole("ADMIN")
+      .antMatchers("/anonymous*").anonymous()
+      .antMatchers("/login*").permitAll()
+      .anyRequest().authenticated()
+      .and()
+	  
+7.
+

@@ -1,0 +1,13 @@
+Advantages and Disadvantage of Angular??
+Change Detection??
+Dependency Injection??
+Observable vs Promise??
+SwitchMap operators in Angular?? any other key operators??
+What are all subjects in RxJs??  :https://www.learnrxjs.io/learn-rxjs/subjects  :https://angular.io/guide/observables
+Memory leaks and how to prevent it?
+Sink pipe and its usage?
+All optimization technique?
+Best practice u need to follw?
+
+Ex: https://www.youtube.com/watch?v=KhUtM8skC5A
+https://www.youtube.com/watch?v=7xuUe_6sd8U
