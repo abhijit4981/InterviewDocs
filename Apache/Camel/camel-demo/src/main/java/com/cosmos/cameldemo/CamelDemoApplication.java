@@ -3,6 +3,7 @@ package com.cosmos.cameldemo;
 import com.cosmos.cameldemo.files.FileCopy;
 import com.cosmos.cameldemo.hello.HelloWorld;
 import com.cosmos.cameldemo.process.CallAClassMethod;
+import com.cosmos.cameldemo.process.ConsumeRestCall;
 import com.cosmos.cameldemo.process.ProcessorDemo;
 import com.cosmos.cameldemo.route.FileCopyRoute;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +13,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class CamelDemoApplication implements CommandLineRunner {
-	@Autowired
+	//@Autowired
 	private HelloWorld helloWorld;
-	@Autowired
+	//@Autowired
 	private FileCopy fileCopy;
-	@Autowired
+	//@Autowired
 	private ProcessorDemo processorDemo;
-	@Autowired
+	//@Autowired
 	private CallAClassMethod callAClassMethod;
+	@Autowired
+	private ConsumeRestCall consumeRestCall;
 
 	public static void main(String[] args) {
 		SpringApplication.run(CamelDemoApplication.class, args);
@@ -30,6 +33,7 @@ public class CamelDemoApplication implements CommandLineRunner {
 		//helloWorld.executeCamelProgram();
 		//fileCopy.copyFile();
 		//processorDemo.processRequest();
-		callAClassMethod.callMethodUsingClassRoute();
+		//callAClassMethod.callMethodUsingClassRoute();
+		consumeRestCall.callRestClassRoute();
 	}
 }
