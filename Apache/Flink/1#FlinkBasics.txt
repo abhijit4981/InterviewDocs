@@ -1,0 +1,19 @@
+What is Apache Flink?
+Open source
+Stream processing Framework For,
+	1.Distributed
+	2.High Performance
+	3.Always available
+It also supports,
+	1.Batch processing
+	2.Graph processing
+	3.Iterative Processing in ML
+
+While running a job it gives,
+Low Latency
+High Throughput
+Robust Fault tollerance using its State and Checkpointing features.
+Semantics:Exactly Once/At least Once
+
+Why Flink not Spark?
+much faster than Spark>Hadoop.

@@ -1,0 +1,49 @@
+Its is a protocol.
+
+Kerbros
+
+SAML:Security Assertion Markup Language (SAML) 
+	It is a login standard that helps users access applications based on sessions in another context. 
+	It’s a single sign-on (SSO) login method offering more secure authentication (with a better user experience) 
+	than usernames and passwords.
+OAuth
+
+
+Active Directory(Identity provider is Azure AD)
+Dropbox will be the (service provider).
+->maintaining credentials for multiple accounts is difficult. u cant login to facebook with gmail credentials.
+so there are some Identity provider's:FB,Google,Apple etc.. 
+->For admins also its difficult to manage all credentials. what if a user resigns u can not go to individuals apps to disable his creds.so we need SSO.
+
+Different Protocols:
+
+How do we achieve SSO? using Password Hash Synchronization.
+
+Azure AD vs OnPremise AD??
+
+Why we need SAML??
+
+Azure AD connect vs SAML?
+
+What is SAML?
+==>Identity provider will store the credentials.
+==>For Ex AD uses NTLM/Kerbros to authenticate Apps
+==>Currently we are using SAML/Oauth/OpenID
+
+Terminology used??
+1.Idp(Identity provider)=Azure AD 
+2.Service Provider=Dropbox
+
+Steps for SAML configuration?
+1.Trust relation betn IdP and SP(using Metada XML--undersatnd config info and baseline Trust)
+
+Flow,
+1.user tries to access the applications
+2.application finds the AD is Azure 
+3.application generates a saml 2.0 auth req xml and redirects user to AD login page
+4.Now Azure logs in the user and creates a token then send this Token back to Application.
+5.Application verifies the Token and user-sign in is complete.
+
+SAML vs OAuth??
+->SAML 2.0 is designed to authenticate a user, so providing user identity data to a service. 
+->OAuth 2.0 is designed as an authorization protocol permitting a user to share access to specific resources with a service provider.
