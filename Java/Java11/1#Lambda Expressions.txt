@@ -1,0 +1,21 @@
+Expression through which we can represent the Anonymous Function.
+
+Limitations:
+can be applied only to Functional Interfaces.
+
+//param,expression,{method body}
+Ex: ()->{}
+
+Advantage,
+Reduce code length
+
+
+
+
+
+
+
+
+
+
+

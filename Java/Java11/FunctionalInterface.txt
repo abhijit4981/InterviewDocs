@@ -1,4 +1,12 @@
 What this is?
+Interface that contains only,
+		->1 abstract method
+		->n number of default and static methods
+		
+Ex: Runnable,Callable,Comparator,
+
+Annotation not mandatory.
+if use multiple abstarct methods then will through C.E.
 How to implement this?
 writte Some programs ?
 is there any Cornor cases?(Exception handling)?

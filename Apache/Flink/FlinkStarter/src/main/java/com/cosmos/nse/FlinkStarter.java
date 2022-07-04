@@ -28,7 +28,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 import java.util.List;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class FlinkStarter {
     private static String keytabLocation = null;
     private static String keytabPrincipal = null;
