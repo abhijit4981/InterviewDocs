@@ -11,6 +11,12 @@ interface Add{
 interface Subtract{
     int minus(int a,int b);
 }
+interface Multiply{
+    int mul(int a,int b);
+}
+interface Devide{
+    int dev(int a,int b);
+}
 @Component
 public class LambdaExpressionPOC {
     public void AddMethodImpl(){
@@ -31,6 +37,18 @@ public class LambdaExpressionPOC {
             return a-b;
         };
         return subtract.minus(val1,val2);
+    }
+    public int multiply(int val1,int val2){
+        Multiply multiply = (a,b)->{
+            return a*b;
+        };
+        return multiply.mul(val1,val2);
+    }
+    public int devide(int val1,int val2){
+        Devide devide = (a,b)->{
+            return a/b;
+        };
+        return devide.dev(val1,val2);
     }
 
 }

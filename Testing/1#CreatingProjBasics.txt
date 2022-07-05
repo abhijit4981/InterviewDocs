@@ -17,3 +17,4 @@ What does the scope means?
 Why its better to have same package name for the test class?? how protected works here?
 can u write test case for private method?
 
+assertEquals()vs assertArrayEquals vs assertIterableEquals() vs assertFalse() etc..

@@ -1,0 +1,3 @@
+Process Creation,Execution,Termination.
+
+@Order		//Must not be used coz u dont want ur test cases to be dependent on each other. To achieve paralalism.
