@@ -1,3 +1,9 @@
 Process Creation,Execution,Termination.
 
 @Order		//Must not be used coz u dont want ur test cases to be dependent on each other. To achieve paralalism.
+			//never create any state outside the test method
+-->Junit create a new instance for every method run. as its a common requirement so we have a annotation in Junit as hooks,
+		1.BeforeAll			// this method has to be static because of obvious reasons.
+		2.AfterAll
+		3.BeforeEach
+		4.AfterEach
