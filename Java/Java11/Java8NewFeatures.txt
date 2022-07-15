@@ -1,5 +1,77 @@
->>New Features?
+>>All New Features?
+1.Functional Interfaces
+2.default and static methods inside FunctionalInterfaces.
+3.Lambda Expressions. How can we write them?
+4.Streams
+5.CompletableInterface(All methods it has,)
+6.Java DateTime API
 
 >>FunctionalInterfaces??
+1 abstract method but n number of default and static methods.
+Runnable,Callable,Comparator etc.
+Annotation is optional
+As equals() overridden from Object class so it does not count and hence make comparator a FunctionalInterface.
 
->>default methods and abstarct method use??
+>>WAP for FunctionalInterface?
+
+
+>>CE issues in FunctionalInterface?
+
+
+>>When to use Default methods?
+This must have the implementation. so its optional to override it in the child class.
+Hence prevents Backward compatibility.
+
+>>Purpose of static method?
+can be the used as the Utility method.
+
+>>can we extend a FunctionalInterface from another FunctionalInterface?
+Not really.But u can make it a normal interface and that will work.
+
+>>Predefined FunctionalInterfaces introduced in Java8?
+Function-->apply(),Predicate-->boolean test(T),Consumer-->accept(T),Supplier-->()
+
+>>What is Lambda expression?
+Its a shorthand for annonymous methods.
+(params) -> {body}
+no prefix
+no return type
+Ex: Function<input,output> function = (t) -> "output is : "+t.length();
+syso(function.apply(55));
+
+>>Disadvantage of Lambda expression?
+Complex to debug(can use plugins to overcome)
+hard without the IDE
+
+>>Stream in Java 8??
+Sequence of Objects
+not a DS
+can write pipelines on Stream: filter,sort,collect
+wont change the underlying DS
+only provide result based on the pipeline.
+
+>>Convert to Stream?
+get the list(Group of Objects)
+convert it to stream by: al.stream()
+
+>>filter takes a Predicate.Ex,
+Predicate<Integer> p = (t)-> t>4;
+
+>>sorted(), Ex,
+al.stream().filter((t)-> t>4).sorted().foreach(t->System.out.println(t))
+
+>>Lambda can be replaced with Method reference(shorthand for lambda to call a method),
+al.stream().filter((t)-> t>4).sorted().foreach(System.out::println)
+Signature1 : ClassName::methodName	//method could be static
+Signature2 : objReference::methodName	//when non static
+
+
+>>map vs flatmap		--Users(name,phone,Emails)
+map  ==> 1 to 1 relationship(for single objects to single object)
+List<Long> phoneNumberList = usersList.stream().map(Users::getPhone).collect(Collectors.toList());
+
+flatMap  ==> M to 1 relationship(for List of objects to single object)
+List<String> emailList = usersList.stream().flatMap(u->u.getEmails().stream()).collect(Collectors.toList());
+
+>>frequency of each character in a String using Java8,
+
