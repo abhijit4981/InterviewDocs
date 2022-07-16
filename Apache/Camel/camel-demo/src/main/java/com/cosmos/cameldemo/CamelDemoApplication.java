@@ -5,6 +5,7 @@ import com.cosmos.cameldemo.hello.HelloWorld;
 import com.cosmos.cameldemo.process.CallAClassMethod;
 import com.cosmos.cameldemo.process.ConsumeRestCall;
 import com.cosmos.cameldemo.process.ProcessorDemo;
+import com.cosmos.cameldemo.route.ConsumeRestCallRoute;
 import com.cosmos.cameldemo.route.FileCopyRoute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -34,6 +35,6 @@ public class CamelDemoApplication implements CommandLineRunner {
 		//fileCopy.copyFile();
 		//processorDemo.processRequest();
 		//callAClassMethod.callMethodUsingClassRoute();
-		consumeRestCall.callRestClassRoute();
+		consumeRestCall.callRestClassRoute02();
 	}
 }

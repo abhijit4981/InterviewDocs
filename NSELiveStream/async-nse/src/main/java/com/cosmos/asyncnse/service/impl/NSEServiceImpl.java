@@ -40,9 +40,15 @@ public class NSEServiceImpl {
     public Mono<CompanyModel> readNSEURL(String companyName){
         String url = nseUrlForQuoteEquity+companyName;
 
-        return webClient.get()
+        Mono<CompanyModel> companyModelMono = webClient.get()
                 .uri(nseUrlForQuoteEquity+companyName)
                 .retrieve()
                 .bodyToMono(CompanyModel.class);
+        SaveStaticDate(companyModelMono);
+        return companyModelMono;
+    }
+
+    private void SaveStaticDate(Mono<CompanyModel> companyModelMono) {
+
     }
 }
