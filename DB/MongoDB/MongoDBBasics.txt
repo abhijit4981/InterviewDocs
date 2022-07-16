@@ -11,7 +11,7 @@ Steps to install MongoDB in Mac:::::::::::::
   xattr -dr com.apple.quarantine .
 
   //run this in one terminal
-  mongod --dbpath=/System/Volumes/Data/mongodb/data/db
+  ./mongod --dbpath=/System/Volumes/Data/mongodb/data/db
 
   //run this in another terminal inside /bin
   ./mongo

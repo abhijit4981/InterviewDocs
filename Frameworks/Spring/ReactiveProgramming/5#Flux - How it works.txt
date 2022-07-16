@@ -1,0 +1,3 @@
+https://www.youtube.com/watch?v=ZYrP0MGkSRY&list=PLnXn1AViWyL70R5GuXt_nIDZytYBnvBdd&index=9
+
+Betty is a non blocking server like tomcat.
