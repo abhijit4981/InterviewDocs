@@ -1,0 +1,30 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>{{title}}</span>
+  </mat-toolbar>
+</p>
+<div *ngIf="ifLoggedIn; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link
+       [routerLink]="['/dashboard']"
+       routerLinkActive #rla1="routerLinkActive"
+       [active]="rla1.isActive">Home
+    </a> 
+  </nav>
+</ng-template>
+<ng-template #elseBlock>
+  <div>
+    <mat-card class="example-card">
+      <mat-card-title>Welcome To Cosmos-NSE</mat-card-title><br><br><br>
+      <mat-card-content>
+        <button mat-stroked-button (click)="callSSO()">Continue with SSO</button>
+      </mat-card-content><br>
+      <mat-card-actions>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-template>
+
+<!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>
