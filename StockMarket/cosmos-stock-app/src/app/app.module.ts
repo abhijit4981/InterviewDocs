@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './controller/dashboard/dashboard.component';
 import { AdminComponent } from './controller/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ManagepageComponent } from './controller/company/managepage/managepage.component';
+import { ManageonecompanyComponent } from './controller/company/manageonecompany/manageonecompany.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AdminComponent
+    AdminComponent,
+    ManagepageComponent,
+    ManageonecompanyComponent
   ],
   imports: [
     BrowserModule,

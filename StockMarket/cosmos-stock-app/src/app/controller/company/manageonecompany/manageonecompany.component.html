@@ -1,0 +1,37 @@
+<div>
+    <form [formGroup]="companyViewForm" (ngSubmit)="onSubmit(companyViewForm)">
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Company Name</mat-label>
+          <input formControlName="companyName" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label>Company Down/Up Sience</mat-label>
+            <input formControlName="companyDaysAsNumbers" matInput>
+          </mat-form-field><br>
+          <mat-form-field appearance="fill">
+            <mat-label>Company Trend Towards</mat-label>
+            <mat-select name="companyTrendPattern" formControlName="companyDaysAsNumbers">
+              <mat-option *ngFor="let trend of trends" [value]="trend">
+                {{trend}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Company Watchlist in</mat-label>
+            <mat-select formControlName="companyWatchList" multiple>
+              <mat-option *ngFor="let watchList of watchLists" [value]="watchList">
+                {{watchList}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field><br>
+          <mat-form-field appearance="fill">
+            <mat-label>Company Position</mat-label>
+            <input formControlName="companyPosition" matInput>
+          </mat-form-field><br>
+        <button mat-flat-button color="primary" type="submit">Update</button>
+      </div>
+      
+    </form>  
+  </div>

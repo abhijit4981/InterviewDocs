@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Companies } from 'src/app/model/companies';
 import { Company } from 'src/app/model/company';
 import { CompanyService } from 'src/app/service/company.service';
@@ -22,7 +23,7 @@ export class AdminComponent implements OnInit {
 
   dataSource : MatTableDataSource<Company> = new MatTableDataSource<Company>([]);
   displayedColumns: string[] = ['companyName','buy'];
-  constructor(private formBuilder: FormBuilder,private staticdata:StaticService,private companyService:CompanyService) { }
+  constructor(private formBuilder: FormBuilder, private router:Router,private staticdata:StaticService,private companyService:CompanyService) { }
 
   ngOnInit(): void {
     this.companyForm= this.formBuilder.group({
@@ -70,6 +71,12 @@ export class AdminComponent implements OnInit {
   }
   onPurchase(company:Company){
     console.log("Calling rest call to byu.."+company);
+  }
+  onManagewatchlist(){
+
+  }
+  onManageCompany(){
+    this.router.navigate(['managecompany']);
   }
 
 }

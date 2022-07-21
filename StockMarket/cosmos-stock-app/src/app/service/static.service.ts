@@ -12,4 +12,12 @@ export class StaticService {
   getUserDetails(){
     return "Abhijit";
   }
+  getTrendPatterns(){
+    let patterns : String[] =["UpSide",'DownSide','SideWays'];
+    return patterns;
+  }
+  getWatchListIn(){
+    let watchList:String[] =['IT','Banking','LTThan1000','Popular','MayBe','Radar', 'Recommendation','MustBuy','BigHouse'];
+    return watchList;
+  }
 }
