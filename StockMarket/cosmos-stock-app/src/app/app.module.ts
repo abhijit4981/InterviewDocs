@@ -11,6 +11,7 @@ import { AdminComponent } from './controller/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ManagepageComponent } from './controller/company/managepage/managepage.component';
 import { ManageonecompanyComponent } from './controller/company/manageonecompany/manageonecompany.component';
+import { AddNoteComponent } from './controller/notes/add-note/add-note.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ManageonecompanyComponent } from './controller/company/manageonecompany
     DashboardComponent,
     AdminComponent,
     ManagepageComponent,
-    ManageonecompanyComponent
+    ManageonecompanyComponent,
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { ManageonecompanyComponent } from './controller/company/manageonecompany
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule, 
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

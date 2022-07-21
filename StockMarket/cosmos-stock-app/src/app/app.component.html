@@ -16,6 +16,11 @@
        routerLinkActive #rla1="routerLinkActive"
        [active]="rla1.isActive">Admin
     </a> 
+    <a mat-tab-link
+       [routerLink]="['/notes']"
+       routerLinkActive #rla1="routerLinkActive"
+       [active]="rla1.isActive">Help
+    </a> 
   </nav>
 </ng-template>
 <ng-template #elseBlock>

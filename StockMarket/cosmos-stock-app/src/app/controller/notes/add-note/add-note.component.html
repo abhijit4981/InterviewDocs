@@ -1,0 +1,11 @@
+<div *ngIf="showTakeAnotePage; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <a>Take Note,</a>
+</ng-template>
+<ng-template #elseBlock>
+  <div>
+    <p>
+    -->Take a <a [routerLink]="[]" (click)="onTotakingNote()"> Note</a><br>
+    </p>
+  </div>
+</ng-template>
