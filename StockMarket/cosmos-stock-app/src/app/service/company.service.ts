@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
 import { baseUrl } from 'src/environments/environment';
+import { Companies } from '../model/companies';
 import { Company } from '../model/company';
 
 @Injectable({
@@ -10,10 +11,14 @@ import { Company } from '../model/company';
 export class CompanyService {
 
   constructor(private http: HttpClient) { }
-  modelUrl = baseUrl+"/nse/save/";
+  getCompanyUrl = baseUrl+"/nse/";
+  saveCompanyUrl = baseUrl+"/nse/save/";
 
   saveCompany(companyName:String) {
-    return this.http.post<Company>(this.modelUrl+companyName,null).pipe(catchError(this.handleError));
+    return this.http.post<Company>(this.saveCompanyUrl+companyName,null).pipe(catchError(this.handleError));
+  }
+  getAllCompanies() {
+    return this.http.get<Companies>(this.getCompanyUrl).pipe(catchError(this.handleError));
   }
 
   private handleError(httpError: HttpErrorResponse) {

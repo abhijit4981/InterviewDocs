@@ -63,11 +63,11 @@ export class AdminComponent implements OnInit {
     this.viewPositionTab=true;
   }
   viewAllCompanyPage(){
-    //this.dataSource = this.staticdata.getAllCompany().companyList;
-    // .subscribe((data: any)=>{
-    //   console.log(data);
-    //   this.dataSource = new MatTableDataSource(data.nseListedCompanyModelList);
-    // }) 
+    this.companyService.getAllCompanies()
+     .subscribe((data: Companies)=>{
+       console.log(data.companyList);
+       this.dataSource = new MatTableDataSource(data.companyList);
+     }) 
     this.viewAllCompanyTab=true;
   }
   onDelete(user:any){

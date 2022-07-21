@@ -1,6 +1,7 @@
 package com.cosmos.nseindia.service;
 
 import com.cosmos.nseindia.model.Company;
+import com.cosmos.nseindia.pojo.Companies;
 import com.cosmos.nseindia.pojo.company.CompanyModel;
 import com.cosmos.nseindia.repository.CompanyRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -17,6 +18,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -86,5 +88,12 @@ public class CompanyService {
         LocalDate maxWeekDate = LocalDate.parse(companyModel.getPriceInfo().getWeekHighLow().getMaxDate(),formatter);
         nseListedCompanyModel.setMaxWeekDate(maxWeekDate);
         return nseListedCompanyModel;
+    }
+
+    public Companies getAllCompanies() {
+        List<Company> companyList = companyRepository.findAll();
+        Companies companies = new Companies();
+        companies.setCompanyList(companyList);
+        return companies;
     }
 }
