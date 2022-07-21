@@ -1,0 +1,67 @@
+<div>
+  <p>
+    1.Click to Add a <a [routerLink]="[]" (click)="onGoToAddPageCompany()"> Company.</a><br>
+    2.Click to Add <a [routerLink]="[]" (click)="onGoToAddMoneyPage()">Money.</a><br>
+    3.Click to <a [routerLink]="[]" (click)="viewAllCompanyPage()"> Buy.</a><br>
+    4.Click to <a [routerLink]="[]" (click)="onGoToAddMoneyPage()">Sell.</a>
+    
+    {{company | json}}
+  </p>
+  <div *ngIf="viewCompanyTab">
+    <h3>Add Company To ur List</h3>
+    <form [formGroup]="companyForm" (ngSubmit)="onSaveCompany(companyForm)">
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Company Name</mat-label>
+            <input formControlName="companyName" matInput>
+          </mat-form-field><br>
+                  
+          <button mat-flat-button color="primary" type="submit">Save</button>
+        </div> 
+      </form>
+        
+    </div>
+      <div *ngIf="viewMoneyPage">
+      <h3>Add Cash:</h3>
+      <form [formGroup]="adminForm" (ngSubmit)="onAddMoney(adminForm)">
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Amount</mat-label>
+            <input formControlName="amount" matInput>
+          </mat-form-field><br>
+                  
+          <button mat-flat-button color="primary" type="submit">Add</button>
+        </div> 
+      </form>
+      </div>  
+      <div *ngIf="viewAllCompanyTab">
+        <div>
+        
+          <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        
+            <ng-container matColumnDef="companyName">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.companyId}} </td>
+            </ng-container>
+                    
+            <!-- Update Column -->
+            <ng-container matColumnDef="update">
+              <th mat-header-cell *matHeaderCellDef> Update </th>
+              <td mat-cell *matCellDef="let element">
+              <button mat-flat-button color="primary" type="button" (click)="onUpdate(element)">Update</button>
+            </ng-container>
+            <!-- Delete Column -->
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef> Delete </th>
+              <td mat-cell *matCellDef="let element">
+              <button mat-flat-button color="primary" type="button" (click)="onDelete(element)">Delete</button>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[20,50]" showFirstLastButtons></mat-paginator>
+        </div>
+          
+        </div>  
+</div>

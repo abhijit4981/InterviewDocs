@@ -8,10 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'cosmos-stock-app';
-  ifLoggedIn:boolean=false;
+  ifLoggedIn:boolean=true;
   longText:string="N/A";
   constructor(private router:Router){}
   callSSO(){
+    //turn ifLoggedIn on once u get the auth cleared..
     this.ifLoggedIn = true;
     this.router.navigate(['dashboard']);
   }
