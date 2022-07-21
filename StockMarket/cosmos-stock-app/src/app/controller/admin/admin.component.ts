@@ -14,7 +14,6 @@ import { StaticService } from 'src/app/service/static.service';
 export class AdminComponent implements OnInit {
   companyForm:FormGroup;
   adminForm:FormGroup;
-  companies:Companies;
   viewCompanyTab:boolean=false;
   viewAllCompanyTab:boolean=false;
   viewMoneyPage:boolean=false;
@@ -22,7 +21,7 @@ export class AdminComponent implements OnInit {
   company:Company;
 
   dataSource : MatTableDataSource<Company> = new MatTableDataSource<Company>([]);
-  displayedColumns: string[] = ['companyName', 'industry','listingDate','lastUpdateTime','value','update','clone','delete'];
+  displayedColumns: string[] = ['companyName','buy'];
   constructor(private formBuilder: FormBuilder,private staticdata:StaticService,private companyService:CompanyService) { }
 
   ngOnInit(): void {
@@ -65,16 +64,12 @@ export class AdminComponent implements OnInit {
   viewAllCompanyPage(){
     this.companyService.getAllCompanies()
      .subscribe((data: Companies)=>{
-       console.log(data.companyList);
        this.dataSource = new MatTableDataSource(data.companyList);
      }) 
     this.viewAllCompanyTab=true;
   }
-  onDelete(user:any){
-    console.log("Calling rest call to update.."+user);
-  }
-  onUpdate(user:any){
-    console.log("Calling rest call to update.."+user);
+  onPurchase(company:Company){
+    console.log("Calling rest call to byu.."+company);
   }
 
 }
