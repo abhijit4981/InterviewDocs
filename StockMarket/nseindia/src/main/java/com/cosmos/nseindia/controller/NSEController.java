@@ -19,4 +19,8 @@ public class NSEController {
     public Companies getAllCompanies(){
         return companyService.getAllCompanies();
     }
+    @GetMapping("/readutil")
+    public void readFromUtility(){
+        companyService.saveCompaniesAsCompletableFuture();
+    }
 }

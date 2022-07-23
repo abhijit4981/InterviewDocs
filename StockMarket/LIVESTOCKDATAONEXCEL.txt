@@ -1,0 +1,7 @@
+Open Google sheets
+Open google finance
+Create columns in sheet
+https://docs.google.com/spreadsheets/d/1rdyASYDwFtYH8v8jwS7BDeFly3VMY-_xYQZBK7DFUgc/edit#gid=0
+
+1.for LTP ==> =GOOGLEFINANCE("NSE:"&A2, "price")
+2.for open price ==> =GOOGLEFINANCE("NSE:"&A2, "priceopen")
