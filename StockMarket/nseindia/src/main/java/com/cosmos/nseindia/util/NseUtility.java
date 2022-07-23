@@ -23,7 +23,7 @@ public class NseUtility {
     public void readExcelFile(){
         FileInputStream file = null;
         try {
-            File file1 = ResourceUtils.getFile("classpath:ListedCompanyListNSE2022.xlsx");
+            File file1 = ResourceUtils.getFile("classpath:NSEon24July2022.xlsx");
             file = new FileInputStream(file1);
             Workbook workbook = new XSSFWorkbook(file);
 
@@ -46,5 +46,6 @@ public class NseUtility {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        log.info("Read this sheet "+nseListedCompany);
     }
 }
